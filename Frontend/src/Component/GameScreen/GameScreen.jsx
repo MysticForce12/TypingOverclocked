@@ -173,7 +173,7 @@ const GameScreen = () => {
 					<div className="notleaderbord">
 						<div className="titleBar">
 							<img src={logoIcon} alt="logo" />
-							TypeRAIJIN
+							Typing Overclocked
 						</div>
 						<div className="timer">{formatTime(timeLeft)}</div>
 					</div>
