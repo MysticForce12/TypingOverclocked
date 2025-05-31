@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: rgb(6, 141, 237);
+    background: linear-gradient(135deg, rgba(80, 116, 248, 0.9), rgba(136, 219, 84, 0.8));
     font-family: 'Josefin Slab', serif;
     display: flex;
     justify-content: center;
@@ -32,16 +32,25 @@ body {
     flex-direction: column;
 }
 
-.GameTitle {
-    box-sizing: border-box;
-    padding: 0px 30px 10px 30px;
-    font-size: 4em;
+.GameTitleTwoLine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 3em;
     text-align: center;
     border-bottom: 1px solid black;
-    /* letter-spacing: 0.2em; */
-    width: 750px;
     user-select: none;
+    gap: 22px;
+    line-height: 1.2;
 }
+
+.line {
+    display: flex;
+    gap: 0.00001em;
+    letter-spacing: 0.1em;
+}
+
 
 .NameTitle {
     display: flex;
@@ -260,5 +269,59 @@ body {
     all: unset;
     cursor: pointer;
     font-weight: bold;
-    color: rgb(39, 136, 120);
+    color: rgb(2, 2, 22);
+}
+
+/* === CYBERPUNK VIBES ADD-ON === */
+
+.GameTitleTwoLine {
+    color: #f0f0f0;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #00ffe1,
+        0 0 20px #00ffe1,
+        0 0 40px #00ffe1,
+        0 0 80px #00ffe1,
+        0 0 90px #00ffe1,
+        0 0 100px #00ffe1,
+        0 0 150px #00ffe1;
+    animation: glitchyGlow 3s infinite alternate;
+}
+
+.line {
+    animation: flicker 2.5s infinite alternate;
+    font-weight: 700;
+}
+
+/* Neon flicker animation */
+@keyframes flicker {
+    0%   { opacity: 1; }
+    4%   { opacity: 0.9; }
+    6%   { opacity: 0.85; }
+    8%   { opacity: 0.95; }
+    10%  { opacity: 0.9; }
+    11%  { opacity: 1; }
+    14%  { opacity: 0.95; }
+    16%  { opacity: 0.9; }
+    17%  { opacity: 0.9; }
+    20%  { opacity: 1; }
+    100% { opacity: 0.97; }
+}
+
+/* Slight pulsating neon glow */
+@keyframes glitchyGlow {
+    0% {
+        text-shadow:
+            0 0 3px #ff0,
+            0 0 6px #0ff,
+            0 0 9px #0ff,
+            0 0 12px #0ff;
+    }
+    100% {
+        text-shadow:
+            0 0 6px rgb(239, 156, 239),
+            0 0 12px rgba(142, 47, 205, 0.233),
+            0 0 18px #0ff,
+            0 0 24px #0ff;
+    }
 }

@@ -110,15 +110,24 @@ export const HomeScreen = () => {
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
 			>
-				<div className="GameTitle">
-					{["T", "Y", "P", "E", "R", "A", "I", "J", "I", "N"].map(
-						(letter, i) => (
-							<span key={i} className="glitch-letter">
-								{letter}
-							</span>
-						)
-					)}
+				<div className="GameTitleTwoLine">
+				<div className="line glitch-line">
+					{["T", "Y", "P", "I", "N", "G"].map((letter, i) => (
+					<span key={`top-${i}`} className="glitch-letter">
+						{letter}
+					</span>
+					))}
 				</div>
+				<div className="line glitch-line">
+					{["O", "V", "E", "R", "C", "L", "O", "C", "K", "E", "D"].map((letter, i) => (
+					<span key={`bottom-${i}`} className="glitch-letter">
+						{letter}
+					</span>
+					))}
+				</div>
+				</div>
+
+
 			</motion.div>
 
 			<motion.div className="gameStart">
@@ -165,8 +174,7 @@ export const HomeScreen = () => {
 				</motion.div>
 			</motion.div>
 			<div className="credits">
-				Crafted by <a href="https://github.com/callmenixsh" target="_blank">Lakshit Joshi</a> &{" "}
-				<a href="https://github.com/itslaksh" target="_blank">Ashutosh Bhatt</a>
+				Crafted by <a target="_blank">Lakshit Joshi</a> 
 			</div>
 		</div>
 	);

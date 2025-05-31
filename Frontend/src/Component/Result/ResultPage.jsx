@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Leaderboard from "../Sub-component/Leaderboard";
 import socket from "../../socket";
@@ -117,7 +117,7 @@ const ResultPage = () => {
 							id="share-button"
 							onClick={shareResults}
 						>
-							Share
+							Download
 						</motion.div>
 						{/* <div className="result-btns rePlay" onClick={handleReplay}>
               Play Again
