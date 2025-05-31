@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+.boddy {
+	margin-top: 2vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.gameUI {
+	display: flex;
+	width: 95vw;
+	height: 70vh;
+	background: #e4e2e2;
+	border-radius: 1vh;
+	align-items: center;
+}
+
+.tabList {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 10vh .9vh;
+	padding: 3vh .2vh;
+	padding-right: .5vh;
+	border-left: rgb(143, 169, 160) .3vh solid;
+	box-sizing: border-box;
+	height: 90%;
+}
+
+.titleBar {
+	font-size: 2.4vh;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	padding-bottom: 2vh;
+	gap: 1vh;
+}
+
+.titleBar img {
+	height: 6vh;
+}
+
+.timer {
+	box-sizing: border-box;
+	min-width: 23vh;
+	justify-content: center;
+	padding: 1.3vh 0vw;
+	display: flex;
+	font-size: 3.8vh;
+	background: #e5e4e4;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.116);
+	border-radius: 40px;
+	letter-spacing: .2em;
+}
+
+.notleaderbord {
+	height: 20vh;
+	flex: .3;
+}
+
+.yesleaderbord {
+	flex: 1;
+}
+
+.typingPanel {
+	font-family: 'Josefin Slab', serif;
+	margin-top: 3vh;
+	padding: 2vh 1vh;
+	font-size: 4vh;
+	letter-spacing: .8em;
+	width: 80vw;
+	background: #e4e2e2;
+	box-shadow: 0px .4vh .4vh rgba(0, 0, 0, 0.25);
+	border-radius: 10vh;
+	text-align: center;
+	border: none;
+	text-transform: uppercase;
+}
+
+.typingPanel {
+	outline: none;
+}
+
+/* countdown overlay css  */
+.countdown-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+.countdown-text {
+	color: white;
+	font-size: 5rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.word.invisible {
+	visibility: hidden;
+}
