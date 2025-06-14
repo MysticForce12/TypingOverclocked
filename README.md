@@ -16,9 +16,8 @@
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Vite, React (if applicable)
+- **Frontend**: Vite, React 
 - **Backend**: Node.js, Express, Socket.IO
-- **Database**: MongoDB (via Mongoose)
 - **Dev Tools**: Babel, Nodemon, dotenv
 
 ---
