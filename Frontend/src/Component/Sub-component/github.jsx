@@ -1,5 +1,3 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Subcomps.css'
 import gitIcon from '../../assets/github.png'
 

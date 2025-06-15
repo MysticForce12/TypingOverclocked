@@ -1,7 +1,7 @@
 {
-	"name": "typeraijin",
+	"name": "typingoverclocked",
 	"version": "1.0.0",
-	"description": "type-raijin - Multiplayer Typing Game",
+	"description": "Typing Overclocked - Multiplayer Typing Game",
 	"main": "server.js",
 	"type": "module",
 	"scripts": {
@@ -11,14 +11,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/callmenixsh/TypeRaijin.git"
+		"url": "git+https://github.com/MysticForce12/TypingOverclocked"
 	},
 	"author": "LJ",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/callmenixsh/TypeRaijin/issues"
+		"url": "https://github.com/MysticForce12/TypingOverclocked/issues"
 	},
-	"homepage": "https://github.com/callmenixsh/TypeRaijin#readme",
+	"homepage": "https://github.com/MysticForce12/TypingOverclocked#readme",
 	"dependencies": {
 		"axios": "^1.7.7",
 		"dotenv": "^16.4.5",

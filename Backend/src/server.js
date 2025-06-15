@@ -13,7 +13,7 @@ const io = new Server(server, {
 
 app.use(cors());
 app.get("/", (req, res) => {
-	res.send("Sayonara Onii chan");
+	res.send("connected to the server");
 });
 
 const PORT = process.env.PORT || 4000;
@@ -217,12 +217,12 @@ io.on("connection", (socket) => {
 		room.gameStarted = true;
 	});
 
-	socket.on("requestWord", () => {
+	socket.on("requestWord", ({roomId}) => {
 		const uniqueWord = getUniqueWord();
 		if (uniqueWord) {
-			socket.emit("receiveWord", { word: uniqueWord });
+			io.to(roomId).emit("receiveWord", { word: uniqueWord });
 		} else {
-			socket.emit("noMoreWords");
+			io.to(roomId).emit("noMoreWords");
 		}
 	});
 
@@ -247,17 +247,6 @@ io.on("connection", (socket) => {
 			}
 		}
 	});
-
-	// socket.on('submitStats', ({ roomId, stats }) => {
-	// 	const room = rooms[roomId];
-	// 	if (room) {
-	// 		const player = room.players.find(p => p.id === socket.id);
-	// 		if (player) {
-	// 			player.stats = stats;
-	// 			io.to(roomId).emit('updatePlayerList', { playerList: room.players });
-	// 		}
-	// 	}
-	// });
 
 	socket.on('endGame', ({ roomId }) => {
 		const room = rooms[roomId];

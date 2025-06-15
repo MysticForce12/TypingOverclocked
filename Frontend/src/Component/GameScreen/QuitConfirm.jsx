@@ -3,7 +3,6 @@ import './QuitConfirm.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 import socket from '../../socket';
 
-
 const QuitConfirm = () => {
     const location = useLocation();
     const roomId = location.state?.roomId || "EasterEgg";
@@ -29,11 +28,11 @@ const QuitConfirm = () => {
     return (
         <div className="overlay">
             <div className="modal">
-                <p>YOU WANNA QUIT FOSHO?</p>
+                <p>You want to quit ?</p>
             </div>
             <div className="buttonGroup">
-                <button className="confirmButton" onClick={onConfirm}>YESSIR</button>
-                <button className="cancelButton" onClick={onCancel}>NOSIR</button>
+                <button className="confirmButton" onClick={onConfirm}>Yes</button>
+                <button className="cancelButton" onClick={onCancel}>No</button>
             </div>
         </div>
     );

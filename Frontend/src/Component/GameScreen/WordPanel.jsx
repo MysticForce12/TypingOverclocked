@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./WordPanel.css";
 import socket from "../../socket";
 import { motion } from "framer-motion";
