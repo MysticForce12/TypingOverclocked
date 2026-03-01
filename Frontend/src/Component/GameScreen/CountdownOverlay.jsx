@@ -18,7 +18,7 @@ const CountdownOverlay = ({ onComplete }) => {
 		<motion.div className="countdown-overlay">
 			<motion.div
 				className="countdown-text"
-				key={countdown} // Add key to trigger re-animation
+				key={countdown} 
 				initial={{ scale: 0 }}
 				animate={{ scale: 1 }}
 				exit={{ scale: 0 }}
