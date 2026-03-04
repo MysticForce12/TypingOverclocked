@@ -1,14 +1,10 @@
 import { motion } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-// import socket from '../../socket';
-
 const CreateRoom = ({ initialTime, setDifficulty, motionProps, whileTap }) => {
 
     const location = useLocation();
     const roomId = location.state?.roomId || 'No Room ID';
-
-    // console.log(RoomId)
 
     const navigate = useNavigate();
 
